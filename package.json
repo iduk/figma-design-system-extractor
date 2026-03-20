@@ -1,0 +1,32 @@
+{
+  "name": "figma-design-system-extractor",
+  "version": "1.0.0",
+  "description": "Figma Dev Mode URL → Design System.md 자동 생성",
+  "main": "scripts/generate-md.js",
+  "scripts": {
+    "extract": "bash scripts/extract-figma.sh",
+    "parse": "node scripts/parse-tokens.js",
+    "map": "node scripts/map-to-code.js",
+    "generate": "node scripts/generate-md.js",
+    "full": "npm run extract && npm run parse && npm run map && npm run generate"
+  },
+  "keywords": [
+    "figma",
+    "design-system",
+    "tokens",
+    "claude",
+    "design-tokens"
+  ],
+  "author": "iduk",
+  "license": "MIT",
+  "dependencies": {
+    "handlebars": "^4.7.8"
+  },
+  "devDependencies": {
+    "chalk": "^4.1.2",
+    "yargs": "^17.7.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
